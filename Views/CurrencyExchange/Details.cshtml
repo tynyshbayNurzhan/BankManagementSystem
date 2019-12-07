@@ -1,0 +1,51 @@
+@model BankManagementSystem.Models.CurrencyExchange
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>CurrencyExchange</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.currency_id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.currency_id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.purchase_value)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.purchase_value)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sale_value)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sale_value)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.assigned_time)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.assigned_time)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+@model BankManagementSystem.Models.TransactionHistories
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+<h4>TransactionHistories</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="manager_id" class="control-label"></label>
+                <select asp-for="manager_id" class ="form-control" asp-items="ViewBag.manager_id"></select>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="sender_account_id" class="control-label"></label>
+                <select asp-for="sender_account_id" class ="form-control" asp-items="ViewBag.sender_account_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="receiver_account_id" class="control-label"></label>
+                <select asp-for="receiver_account_id" class ="form-control" asp-items="ViewBag.receiver_account_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="operation_id" class="control-label"></label>
+                <select asp-for="operation_id" class ="form-control" asp-items="ViewBag.operation_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="currency_id" class="control-label"></label>
+                <select asp-for="currency_id" class ="form-control" asp-items="ViewBag.currency_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="amount" class="control-label"></label>
+                <input asp-for="amount" class="form-control" />
+                <span asp-validation-for="amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="operation_time" class="control-label"></label>
+                <input asp-for="operation_time" class="form-control" />
+                <span asp-validation-for="operation_time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>
